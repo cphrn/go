@@ -135,7 +135,7 @@ func (m *MockClient) StreamPayments(
 }
 
 // StreamPaymentsWithoutAccount is a mocking a method
-func (m *MockClient) StreamPayments(
+func (m *MockClient) StreamPaymentsWithoutAccount(
 	ctx context.Context,
 	cursor *Cursor,
 	handler PaymentHandler,
