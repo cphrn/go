@@ -464,7 +464,7 @@ func (c *Client) StreamLedgers(
 	})
 }
 
-// StreamPayments streams incoming payments. Use context.WithCancel to stop streaming or
+// StreamPayments streams incoming payments for a certain account. Use context.WithCancel to stop streaming or
 // context.Background() if you want to stream indefinitely.
 func (c *Client) StreamPayments(
 	ctx context.Context,
@@ -484,6 +484,27 @@ func (c *Client) StreamPayments(
 		return nil
 	})
 }
+
+// StreamPaymentsWithoutAccount streams incoming all incoming payments. Use context.WithCancel to stop streaming or
+// context.Background() if you want to stream indefinitely.
+func (c *Client) StreamPaymentsWithoutAccount(
+	ctx context.Context,
+	cursor *Cursor,
+	handler PaymentHandler,
+) (err error) {
+	c.fixURLOnce.Do(c.fixURL)
+	url := fmt.Sprintf("%s/payments", c.URL)
+	return c.stream(ctx, url, cursor, func(data []byte) error {
+		var payment Payment
+		err = json.Unmarshal(data, &payment)
+		if err != nil {
+			return errors.Wrap(err, "Error unmarshaling data")
+		}
+		handler(payment)
+		return nil
+	})
+}
+
 
 // StreamTransactions streams incoming transactions. Use context.WithCancel to stop streaming or
 // context.Background() if you want to stream indefinitely.

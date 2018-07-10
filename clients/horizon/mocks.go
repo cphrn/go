@@ -134,6 +134,16 @@ func (m *MockClient) StreamPayments(
 	return a.Error(0)
 }
 
+// StreamPaymentsWithoutAccount is a mocking a method
+func (m *MockClient) StreamPayments(
+	ctx context.Context,
+	cursor *Cursor,
+	handler PaymentHandler,
+) error {
+	a := m.Called(ctx, cursor, handler)
+	return a.Error(0)
+}
+
 // StreamTransactions is a mocking a method
 func (m *MockClient) StreamTransactions(
 	ctx context.Context,
