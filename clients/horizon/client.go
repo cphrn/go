@@ -485,9 +485,9 @@ func (c *Client) StreamPayments(
 	})
 }
 
-// StreamPaymentsWithoutAccount streams incoming all incoming payments. Use context.WithCancel to stop streaming or
+// StreamAllPayments streams incoming all incoming payments. Use context.WithCancel to stop streaming or
 // context.Background() if you want to stream indefinitely.
-func (c *Client) StreamPaymentsWithoutAccount(
+func (c *Client) StreamAllPayments(
 	ctx context.Context,
 	cursor *Cursor,
 	handler PaymentHandler,

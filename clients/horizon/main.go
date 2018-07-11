@@ -107,7 +107,7 @@ type ClientInterface interface {
 	SequenceForAccount(accountID string) (xdr.SequenceNumber, error)
 	StreamLedgers(ctx context.Context, cursor *Cursor, handler LedgerHandler) error
 	StreamPayments(ctx context.Context, accountID string, cursor *Cursor, handler PaymentHandler) error
-	StreamPaymentsWithoutAccount(ctx context.Context, cursor *Cursor, handler PaymentHandler) error
+	StreamAllPayments(ctx context.Context, cursor *Cursor, handler PaymentHandler) error
 	StreamTransactions(ctx context.Context, accountID string, cursor *Cursor, handler TransactionHandler) error
 	SubmitTransaction(txeBase64 string) (TransactionSuccess, error)
 }
