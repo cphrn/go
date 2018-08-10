@@ -13,8 +13,8 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/support/errors"
+	"github.com/cphrn/go/xdr"
 )
 
 // One is the value of one whole unit of currency. Stellar uses 7 fixed digits

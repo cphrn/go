@@ -3,9 +3,9 @@ package txsub
 import (
 	"context"
 
-	"github.com/stellar/go/build"
-	"github.com/stellar/go/strkey"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/build"
+	"github.com/cphrn/go/strkey"
+	"github.com/cphrn/go/xdr"
 )
 
 type envelopeInfo struct {

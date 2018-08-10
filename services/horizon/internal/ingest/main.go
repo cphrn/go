@@ -8,9 +8,9 @@ import (
 
 	sq "github.com/Masterminds/squirrel"
 	metrics "github.com/rcrowley/go-metrics"
-	"github.com/stellar/go/services/horizon/internal/db2/core"
-	"github.com/stellar/go/support/db"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/services/horizon/internal/db2/core"
+	"github.com/cphrn/go/support/db"
+	"github.com/cphrn/go/xdr"
 )
 
 const (

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/stellar/go/support/log"
+	"github.com/cphrn/go/support/log"
 )
 
 // Event is the packet of data that gets sent over the wire to a connected

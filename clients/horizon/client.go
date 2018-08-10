@@ -13,8 +13,8 @@ import (
 	"strings"
 
 	"github.com/manucorporat/sse"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/support/errors"
+	"github.com/cphrn/go/xdr"
 )
 
 // HomeDomainForAccount returns the home domain for the provided strkey-encoded
@@ -516,7 +516,6 @@ func (c *Client) StreamAllPayments(
 	})
 }
 
-
 // StreamTransactions streams incoming transactions. Use context.WithCancel to stop streaming or
 // context.Background() if you want to stream indefinitely.
 func (c *Client) StreamTransactions(
@@ -527,6 +526,22 @@ func (c *Client) StreamTransactions(
 ) (err error) {
 	c.fixURLOnce.Do(c.fixURL)
 	url := fmt.Sprintf("%s/accounts/%s/transactions", c.URL, accountID)
+	return c.stream(ctx, url, cursor, func(data []byte) error {
+		var transaction Transaction
+		err = json.Unmarshal(data, &transaction)
+		if err != nil {
+			return errors.Wrap(err, "Error unmarshaling data")
+		}
+		handler(transaction)
+		return nil
+	})
+}
+
+// StreamAllTransactions streams all incoming transactions. Use context.WithCancel to stop streaming or
+// context.Background() if you want to stream indefinitely.
+func (c *Client) StreamAllTransactions(ctx context.Context, cursor *Cursor, handler TransactionHandler) (err error) {
+	c.fixURLOnce.Do(c.fixURL)
+	url := fmt.Sprintf("%s/transactions", c.URL)
 	return c.stream(ctx, url, cursor, func(data []byte) error {
 		var transaction Transaction
 		err = json.Unmarshal(data, &transaction)

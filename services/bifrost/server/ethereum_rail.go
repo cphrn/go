@@ -1,12 +1,12 @@
 package server
 
 import (
-	"github.com/stellar/go/services/bifrost/database"
-	"github.com/stellar/go/services/bifrost/ethereum"
-	"github.com/stellar/go/services/bifrost/queue"
-	"github.com/stellar/go/services/bifrost/sse"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/support/log"
+	"github.com/cphrn/go/services/bifrost/database"
+	"github.com/cphrn/go/services/bifrost/ethereum"
+	"github.com/cphrn/go/services/bifrost/queue"
+	"github.com/cphrn/go/services/bifrost/sse"
+	"github.com/cphrn/go/support/errors"
+	"github.com/cphrn/go/support/log"
 )
 
 // onNewEthereumTransaction checks if transaction is valid and adds it to

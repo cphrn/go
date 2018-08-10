@@ -12,9 +12,9 @@ import (
 	"net/url"
 	"sync"
 
-	"github.com/stellar/go/build"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/build"
+	"github.com/cphrn/go/support/errors"
+	"github.com/cphrn/go/xdr"
 )
 
 // DefaultTestNetClient is a default client to connect to test network
@@ -109,6 +109,7 @@ type ClientInterface interface {
 	StreamPayments(ctx context.Context, accountID string, cursor *Cursor, handler PaymentHandler) error
 	StreamAllPayments(ctx context.Context, cursor *Cursor, handler PaymentHandler) error
 	StreamTransactions(ctx context.Context, accountID string, cursor *Cursor, handler TransactionHandler) error
+	StreamAllTransactions(ctx context.Context, cursor *Cursor, handler TransactionHandler) error
 	SubmitTransaction(txeBase64 string) (TransactionSuccess, error)
 }
 

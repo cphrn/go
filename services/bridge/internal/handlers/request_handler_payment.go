@@ -8,16 +8,16 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/stellar/go/address"
-	b "github.com/stellar/go/build"
-	"github.com/stellar/go/clients/horizon"
-	"github.com/stellar/go/protocols/compliance"
-	"github.com/stellar/go/protocols/federation"
-	shared "github.com/stellar/go/services/internal/bridge-compliance-shared"
-	"github.com/stellar/go/services/internal/bridge-compliance-shared/http/helpers"
-	"github.com/stellar/go/services/internal/bridge-compliance-shared/protocols/bridge"
-	callback "github.com/stellar/go/services/internal/bridge-compliance-shared/protocols/compliance"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/address"
+	b "github.com/cphrn/go/build"
+	"github.com/cphrn/go/clients/horizon"
+	"github.com/cphrn/go/protocols/compliance"
+	"github.com/cphrn/go/protocols/federation"
+	shared "github.com/cphrn/go/services/internal/bridge-compliance-shared"
+	"github.com/cphrn/go/services/internal/bridge-compliance-shared/http/helpers"
+	"github.com/cphrn/go/services/internal/bridge-compliance-shared/protocols/bridge"
+	callback "github.com/cphrn/go/services/internal/bridge-compliance-shared/protocols/compliance"
+	"github.com/cphrn/go/xdr"
 )
 
 // Payment implements /payment endpoint

@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
-	"github.com/stellar/go/support/context/requestid"
-	"github.com/stellar/go/support/render/problem"
+	"github.com/cphrn/go/support/context/requestid"
+	"github.com/cphrn/go/support/render/problem"
 )
 
 func TestProblemPackage(t *testing.T) {

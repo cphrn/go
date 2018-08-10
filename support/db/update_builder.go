@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"reflect"
 
-	"github.com/stellar/go/support/errors"
+	"github.com/cphrn/go/support/errors"
 )
 
 // Exec executes the query that has been previously configured on the

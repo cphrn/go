@@ -2,7 +2,7 @@ package core
 
 import (
 	sq "github.com/Masterminds/squirrel"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/xdr"
 )
 
 // ChangesXDR returns the XDR encoded changes for this transaction fee

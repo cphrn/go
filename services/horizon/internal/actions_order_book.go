@@ -3,13 +3,13 @@ package horizon
 import (
 	"net/http"
 
-	"github.com/stellar/go/services/horizon/internal/db2/core"
-	"github.com/stellar/go/services/horizon/internal/resourceadapter"
-	"github.com/stellar/go/support/render/problem"
-	"github.com/stellar/go/xdr"
-	"github.com/stellar/go/protocols/horizon"
-	"github.com/stellar/go/services/horizon/internal/render/sse"
-	"github.com/stellar/go/support/render/hal"
+	"github.com/cphrn/go/services/horizon/internal/db2/core"
+	"github.com/cphrn/go/services/horizon/internal/resourceadapter"
+	"github.com/cphrn/go/support/render/problem"
+	"github.com/cphrn/go/xdr"
+	"github.com/cphrn/go/protocols/horizon"
+	"github.com/cphrn/go/services/horizon/internal/render/sse"
+	"github.com/cphrn/go/support/render/hal"
 )
 
 // OrderBookShowAction renders a account summary found by its address.

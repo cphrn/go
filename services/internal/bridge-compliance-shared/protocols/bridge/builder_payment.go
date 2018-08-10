@@ -1,11 +1,11 @@
 package bridge
 
 import (
-	"github.com/stellar/go/amount"
-	b "github.com/stellar/go/build"
-	shared "github.com/stellar/go/services/internal/bridge-compliance-shared"
-	"github.com/stellar/go/services/internal/bridge-compliance-shared/http/helpers"
-	"github.com/stellar/go/services/internal/bridge-compliance-shared/protocols"
+	"github.com/cphrn/go/amount"
+	b "github.com/cphrn/go/build"
+	shared "github.com/cphrn/go/services/internal/bridge-compliance-shared"
+	"github.com/cphrn/go/services/internal/bridge-compliance-shared/http/helpers"
+	"github.com/cphrn/go/services/internal/bridge-compliance-shared/protocols"
 )
 
 // PaymentOperationBody represents payment operation

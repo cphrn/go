@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/stellar/go/keypair"
+	"github.com/cphrn/go/keypair"
 )
 
 var prefix string

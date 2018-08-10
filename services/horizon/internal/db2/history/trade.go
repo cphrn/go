@@ -5,10 +5,10 @@ import (
 	"math"
 
 	sq "github.com/Masterminds/squirrel"
-	"github.com/stellar/go/services/horizon/internal/db2"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/support/time"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/services/horizon/internal/db2"
+	"github.com/cphrn/go/support/errors"
+	"github.com/cphrn/go/support/time"
+	"github.com/cphrn/go/xdr"
 )
 
 // PagingToken returns a cursor for this trade

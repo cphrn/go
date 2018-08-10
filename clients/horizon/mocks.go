@@ -3,7 +3,7 @@ package horizon
 import (
 	"context"
 
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/xdr"
 	"github.com/stretchr/testify/mock"
 )
 
@@ -152,6 +152,16 @@ func (m *MockClient) StreamTransactions(
 	handler TransactionHandler,
 ) error {
 	a := m.Called(ctx, accountID, cursor, handler)
+	return a.Error(0)
+}
+
+// StreamAllTransactions is a mocking a method
+func (m *MockClient) StreamAllTransactions(
+	ctx context.Context,
+	cursor *Cursor,
+	handler TransactionHandler,
+) error {
+	a := m.Called(ctx, cursor, handler)
 	return a.Error(0)
 }
 

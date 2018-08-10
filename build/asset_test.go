@@ -3,7 +3,7 @@ package build
 import (
 	"testing"
 
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/xdr"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

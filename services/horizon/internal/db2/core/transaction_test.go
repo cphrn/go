@@ -3,8 +3,8 @@ package core
 import (
 	"testing"
 
-	"github.com/stellar/go/services/horizon/internal/test"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/services/horizon/internal/test"
+	"github.com/cphrn/go/xdr"
 )
 
 func TestTransactionsQueries(t *testing.T) {

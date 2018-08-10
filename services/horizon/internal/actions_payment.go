@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/stellar/go/services/horizon/internal/db2"
-	"github.com/stellar/go/services/horizon/internal/db2/history"
-	"github.com/stellar/go/support/render/hal"
-	"github.com/stellar/go/services/horizon/internal/render/sse"
-	"github.com/stellar/go/services/horizon/internal/resourceadapter"
+	"github.com/cphrn/go/services/horizon/internal/db2"
+	"github.com/cphrn/go/services/horizon/internal/db2/history"
+	"github.com/cphrn/go/support/render/hal"
+	"github.com/cphrn/go/services/horizon/internal/render/sse"
+	"github.com/cphrn/go/services/horizon/internal/resourceadapter"
 )
 
 // PaymentsIndexAction returns a paged slice of payments based upon the provided

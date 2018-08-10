@@ -2,7 +2,7 @@ package history
 
 import (
 	sq "github.com/Masterminds/squirrel"
-	"github.com/stellar/go/xdr"
+	"github.com/cphrn/go/xdr"
 )
 
 func (q *Q) GetAssetByID(dest interface{}, id int64) (err error) {

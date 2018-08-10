@@ -3,8 +3,8 @@ package ingest
 import (
 	"testing"
 
-	"github.com/stellar/go/network"
-	"github.com/stellar/go/services/horizon/internal/test"
+	"github.com/cphrn/go/network"
+	"github.com/cphrn/go/services/horizon/internal/test"
 )
 
 func TestBackfill(t *testing.T) {
